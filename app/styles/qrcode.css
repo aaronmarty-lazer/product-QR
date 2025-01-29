@@ -1,0 +1,44 @@
+/* Styles for QRCode Component */
+.qr-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.qr-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  text-align: center;
+}
+
+.qr-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.qr-image-container {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.qr-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.qr-description {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
