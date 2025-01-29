@@ -40,6 +40,7 @@ export async function loader({ request, params }) {
     return json({
       destination: "product",
       title: "",
+      description: "", // Added description for new QR codes
     });
   }
 
@@ -124,6 +125,7 @@ export default function QRCodeForm() {
   function handleSave() {
     const data = {
       title: formState.title,
+      description: formState.description, // Added description
       productId: formState.productId || "",
       productVariantId: formState.productVariantId || "",
       productHandle: formState.productHandle || "",
@@ -148,9 +150,10 @@ export default function QRCodeForm() {
       <Layout>
         <Layout.Section>
           <BlockStack gap="500">
-            {/* [START title] */}
+            {/* [START title & description] */}
             <Card>
               <BlockStack gap="500">
+                {/* Title Field */}
                 <Text as={"h2"} variant="headingLg">
                   Title
                 </Text>
@@ -164,9 +167,27 @@ export default function QRCodeForm() {
                   onChange={(title) => setFormState({ ...formState, title })}
                   error={errors.title}
                 />
+
+                {/* Description Field */}
+                <Text as={"h2"} variant="headingLg">
+                  Description
+                </Text>
+                <TextField
+                  id="description"
+                  helpText="A short description of the QR code"
+                  label="Description"
+                  labelHidden
+                  autoComplete="off"
+                  multiline={4} // Allows multi-line input
+                  value={formState.description}
+                  onChange={(description) =>
+                    setFormState({ ...formState, description })
+                  }
+                  error={errors.description}
+                />
               </BlockStack>
             </Card>
-            {/* [END title] */}
+            {/* [END title & description] */}
             <Card>
               <BlockStack gap="500">
                 {/* [START product] */}

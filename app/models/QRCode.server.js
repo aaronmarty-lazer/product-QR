@@ -104,6 +104,10 @@ export function validateQRCode(data) {
     errors.destination = "Destination is required";
   }
 
+  if (!data.description) {
+    errors.description = "Description is required";
+  }
+
   if (Object.keys(errors).length) {
     return errors;
   }

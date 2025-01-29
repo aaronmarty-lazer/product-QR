@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "267d6605e7f818a948d07952090138a1"
-application_url = "https://handhelds-donation-monitored-horn.trycloudflare.com"
+application_url = "https://ix-moss-sie-environmental.trycloudflare.com"
 embedded = true
 name = "haroon_qr_app"
 handle = "haroon_qr_app"
@@ -20,9 +20,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://handhelds-donation-monitored-horn.trycloudflare.com/auth/callback",
-  "https://handhelds-donation-monitored-horn.trycloudflare.com/auth/shopify/callback",
-  "https://handhelds-donation-monitored-horn.trycloudflare.com/api/auth/callback"
+  "https://ix-moss-sie-environmental.trycloudflare.com/auth/callback",
+  "https://ix-moss-sie-environmental.trycloudflare.com/auth/shopify/callback",
+  "https://ix-moss-sie-environmental.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]

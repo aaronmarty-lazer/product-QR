@@ -30,8 +30,8 @@ model QRCode {
   productHandle    String
   productVariantId String
   destination      String
+  description      String?  // New description field
   scans            Int      @default(0)
   createdAt        DateTime @default(now())
 }
-
 // [END qrcode-model]

@@ -17,19 +17,21 @@ export const loader = async ({ params }) => {
   return json({
     title: qrCode.title,
     image: await getQRCodeImage(id),
+    description: qrCode.description, // Include description
   });
 };
 // [END loader]
 
 // [START component]
 export default function QRCode() {
-  const { image, title } = useLoaderData();
+  const { image, title, description } = useLoaderData();
 
   return (
     <>
       <h1>{title}</h1>
       <img src={image} alt={`QR Code for product`} />
+      <p>{description}</p> {/* Display description */}
     </>
   );
 }
-// [START component]
+// [END component]
